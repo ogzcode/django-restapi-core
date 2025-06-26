@@ -1,13 +1,16 @@
 - Django Admin panelinde model isimlerinin sonuna 's' eklenmemesi için aşağıdaki kodu kullanabilirsiniz.
-
+- Django da veritabanı adlarını app isimlerinin eklenmemesi için `Meta` sınıfında `db_table` özelliğini kullanabilirsiniz.
+- 
 ```python
 
 class ModelName(models.Model):
     # model alanları
 
     class Meta:
-        verbose_name = "Model Name"  # Burada 's' eklenmemiş hali
-        verbose_name_plural = "Model Names"  # Burada da 's' eklenmemiş hali
+        verbose_name = "Model Name"
+        verbose_name_plural = "Model Names"
+        db_table = 'category'
+        
 ```
 
 ### GraphQL Authentication Middleware
@@ -41,8 +44,6 @@ class CategoryQuery(graphene.ObjectType):
         return Category.objects.all()
 
 ```
-
-
 
 
 
