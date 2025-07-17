@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
-    'auth_api.apps.AuthConfig'
+    'authentication.apps.AuthConfig'
 ]
 
 REST_FRAMEWORK = {

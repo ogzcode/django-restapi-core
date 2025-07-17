@@ -1,5 +1,5 @@
 from django.urls import path
-from auth_api.views import RegisterView, CustomTokenObtainPairView, CustomTokenRefreshView
+from .views import RegisterView, CustomTokenObtainPairView, CustomTokenRefreshView
 
 urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
